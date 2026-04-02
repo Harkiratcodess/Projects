@@ -21,8 +21,8 @@ function displayresult(data)
     }
     result.innerHTML=`
     <img src="${data.avatar_url}" alt="avatar" class="avatar">
-    <h2>${data.name}</h2>
-    <p>${data.bio}</p>
+    <h2>${data.name || data.login}</h2>
+    <p>${data.bio || 'No bio available'}</p>
     <p>Followers: ${data.followers} | Following: ${data.following}</p>
     <p> ${data.public_repos} public repos</p>
     <a href="${data.html_url}" target="_blank">View Profile</a>
