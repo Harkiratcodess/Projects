@@ -12,6 +12,14 @@ function getprofile(userName){
     .then(data=>displayresult(data))
     .catch(err=>console.log(err));
 }
+input.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+        const userName = input.value.trim();
+        if(userName !== ''){
+            getprofile(userName);
+        }
+    }
+});
 function displayresult(data)
 {
     if(data.message==='Not Found')
